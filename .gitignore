@@ -1,0 +1,10 @@
+main
+a.out
+*.out
+*.exe
+*.o
+*.obj
+*.dSYM/
+.DS_Store
+.vscode/
+build/
