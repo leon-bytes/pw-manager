@@ -66,8 +66,7 @@ int main()
     // main loop
     while (programIsRunning == true)
     {
-        // showMenu now does all menu input work.
-        // It keeps asking until the user enters a valid choice from 1 to 5.
+
         choice = showMenu();
 
         // menu choices
@@ -93,7 +92,6 @@ int main()
             programIsRunning = false;
         }
 
-        // This blank line makes the output easier to read between actions.
         cout << endl;
     }
 
@@ -121,24 +119,7 @@ int showMenu()
             return 5;
         }
 
-        bool isNumber = true;
-
-        // check if user typed numbers or not
-        for (size_t i = 0; i < menuInput.length(); i++)
-        {
-            if (menuInput[i] < '0' || menuInput[i] > '9')
-            {
-                isNumber = false;
-                break;
-            }
-        }
-
-        if (isNumber == false)
-        {
-            cout << "Invalid input. Please enter numbers only." << endl;
-            cout << endl;
-        }
-        else if (menuInput == "1")
+        if (menuInput == "1")
         {
             return 1;
         }
@@ -160,7 +141,6 @@ int showMenu()
         }
         else
         {
-            // The user entered a number, but it is not one of the menu choices.
             cout << "Invalid choice. Please enter a number from 1 to 5." << endl;
             cout << endl;
         }
