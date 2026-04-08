@@ -54,6 +54,7 @@ void updatePassword(PasswordEntry entries[], int entryCount);
 
 int main()
 {
+    cout << "Welcome!";
     // array that stores 5 PasswordEntry objects
     // (the project explicitly asks for array with 5 entries)
     PasswordEntry entries[5];
@@ -114,10 +115,7 @@ int showMenu()
         cout << "Enter your choice: ";
 
         // invalid input --> return 5
-        if (!(cin >> menuInput))
-        {
-            return 5;
-        }
+        cin >> menuInput;
 
         if (menuInput == "1")
         {
