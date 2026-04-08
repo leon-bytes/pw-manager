@@ -51,10 +51,10 @@ void addEntry(PasswordEntry entries[], int &entryCount);
 void listEntries(PasswordEntry entries[], int entryCount);
 void searchEntry(PasswordEntry entries[], int entryCount);
 void updatePassword(PasswordEntry entries[], int entryCount);
+void clearScreen();
 
 int main()
 {
-    cout << "Welcome!";
     // array that stores 5 PasswordEntry objects
     // (the project explicitly asks for array with 5 entries)
     PasswordEntry entries[5];
@@ -251,4 +251,8 @@ void updatePassword(PasswordEntry entries[], int entryCount)
     }
 
     cout << "Entry not found." << endl;
+}
+
+void clearScreen() {
+    cout << "\033[2J\033[H";
 }
